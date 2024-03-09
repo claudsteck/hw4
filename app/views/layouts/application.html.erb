@@ -31,12 +31,12 @@
           <span class="navbar-text">
           <% if @current_user %>
         <%= @current_user["username"] %>
-           <a href="/">Home</a>
-           <a href="/logout">Logout</a>
+           <a href="/" class="btn btn-dark">Home</a>
+           <a href="/logout" class="btn btn-dark">Logout</a>
         <% else %>
-           <a href="/">Home</a>
-          <a href="/login">Login</a>
-          <a href="/users/new">Signup</a>      
+           <a href="/" class="btn btn-dark">Home</a>
+          <a href="/login" class="btn btn-dark">Login</a>
+          <a href="/users/new" class="btn btn-dark">Signup</a>      
            <% end %>
 
           <%= flash["notice"] %>
