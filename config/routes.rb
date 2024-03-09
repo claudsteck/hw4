@@ -7,4 +7,6 @@ Rails.application.routes.draw do
 
   #login
   get("/login", { :controller => "sessions", :action => "new" })
+  #logout
+  get("/logout", { :controller => "sessions", :action => "destroy" })
 end

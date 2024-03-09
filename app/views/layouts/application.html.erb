@@ -14,16 +14,17 @@
       <%= flash["notice"] %>
     </div>
     <div>
-      <a href="/">Home</a>
+    <% if @current_user %>
+    <%= @current_user["username"] %>
+    <a href="/">Home</a>
       <a href="/logout">Logout</a>
+    <% else %>
       <a href="/login">Login</a>
       <a href="/users/new">Signup</a>
     </div>
+    <% end %>
 <p>
 </p>
-<%= @current_user["username"] %> |
-  <a href="/sessions/new">Login</a> |
-  <a href="/users/new">Sign Up</a>
 
 <p>
   </p>
