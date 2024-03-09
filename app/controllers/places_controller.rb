@@ -11,12 +11,12 @@ class PlacesController < ApplicationController
   end
 
   def new
+    
   end
 
   def create
     @place = Place.new
     @place["name"] = params["name"]
-    @place["user_id"] = @current_user["id"]
     @place.save
     redirect_to "/places"
   end
