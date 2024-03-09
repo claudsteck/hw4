@@ -24,34 +24,36 @@
   </head>
 
   <body>
-  <nav class="navbar bg-primary mb-3" data-bs-theme="dark">
-  <div class="container-fluid">
-    <a class="navbar-brand" href="/">My App</a>
-    <span class="navbar-text">
-    </span>
-  </div>
-</nav>
-  <div>
     <div>
-      <%= flash["notice"] %>
-   
-    <div>
+        <nav class="navbar bg-primary mb-3" data-bs-theme="dark">
+        <div class="container-fluid">
+          <a class="navbar-brand" href="/">My App</a>
+          <span class="navbar-text">
+          </span>
+        </div>   
+      </nav>
+      </div> 
+  <div class ="container">
+  
     
-    <% if @current_user %>
-    <%= @current_user["username"] %>
-    <a href="/">Home</a>
-      <a href="/logout">Logout</a>
-    <% else %>
-      <a href="/">Home</a>
-      <a href="/login">Login</a>
-      <a href="/users/new">Signup</a>
-    </div>
-    <% end %>
-<p>
-</p>
+      <div class="container">
+        <% if @current_user %>
+        <%= @current_user["username"] %>
+           <a href="/">Home</a>
+           <a href="/logout">Logout</a>
+        <% else %>
+           <a href="/">Home</a>
+          <a href="/login">Login</a>
+          <a href="/users/new">Signup</a>      
+           <% end %>
 
-<p>
-  </p>
-    <%= yield %>
+          <%= flash["notice"] %>
+   
+      </div>
+       
+        <%= yield %>
+   </div>
+       
+  
   </body>
-</html>
+  </html>
