@@ -19,7 +19,14 @@
       <a href="/login">Login</a>
       <a href="/users/new">Signup</a>
     </div>
+<p>
+</p>
+<%= @current_user["username"] %> |
+  <a href="/sessions/new">Login</a> |
+  <a href="/users/new">Sign Up</a>
 
+<p>
+  </p>
     <%= yield %>
   </body>
 </html>
