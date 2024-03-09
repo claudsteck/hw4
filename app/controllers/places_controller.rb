@@ -2,7 +2,6 @@ class PlacesController < ApplicationController
 
   def index
     @places = Place.all
-   
   end
 
   def show
@@ -11,7 +10,7 @@ class PlacesController < ApplicationController
   end
 
   def new
-    
+    @entry.uploaded_image.attach(params["uploaded_image"])
   end
 
   def create
